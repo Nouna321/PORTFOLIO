@@ -1,4 +1,15 @@
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
+
+@font-face {
+    font-family: 'playfair';
+    src: url('./fonts/PlayfairDisplay-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url('./fonts/Montserrat-Italic.ttf');
+}
+
 @tailwind utilities;

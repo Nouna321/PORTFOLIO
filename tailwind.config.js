@@ -6,6 +6,10 @@ module.exports = {
             backgroundImage: (theme) => ({
                 header: "url('/src/img/christina-wocintechchat-com-PISwYqWIGPc-unsplash.jpg')",
             }),
+            fontFamily: {
+                playfair: 'playfair',
+                mont: 'mont',
+            },
         },
     },
     variants: {
