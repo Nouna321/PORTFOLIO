@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import Accueil from './Accueil'
 import reportWebVitals from './reportWebVitals'
+import Me from './me'
 
 ReactDOM.render(
     <React.StrictMode>
         <Accueil />
+        <Me />
     </React.StrictMode>,
     document.getElementById('root')
 )

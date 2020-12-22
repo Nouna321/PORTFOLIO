@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import papillion from './img/papillion.png'
 import { GiButterfly } from 'react-icons/gi'
 
 class Accueil extends Component {
@@ -26,7 +25,9 @@ class Accueil extends Component {
                                 <a className='ml-7 text-white mt-8' href='#'>
                                     My projects
                                 </a>
-                                <a className='ml-8 mr-20 text-white mt-5 border border-white-200 px-3 py-3' href='#'>
+                                <a
+                                    className='ml-8 mr-20 text-white mt-5 border border-white-200 px-3 py-3 transition ease-out duration-500 hover:bg-grey-100 transform hover:-translate-y-1'
+                                    href='#'>
                                     Contact me
                                 </a>
                             </nav>
@@ -49,21 +50,6 @@ class Accueil extends Component {
                             Contact me
                         </button>
                     </div>
-                </div>
-                {/* presentation */}
-                <div className=''>
-                    <GiButterfly size={80} className='text-green-500 mx-auto mt-12' />
-                </div>
-                <div className='flex flex-col mr-52 ml-52 border-t-4 border-green-500 mt-12'>
-                    <h1 className='text-center text-green-600 font-playfair font-bold text-5xl mt-12'>About me</h1>
-                    <p className='text-center font-mont text-xl mt-16 text-gray-600'>
-                        Computer Science is huge world, I started to love this world after long research and studies, my first lines of code were in 2nd year at university, then I
-                        continued my research in others sectors such as security, networks, ...
-                    </p>
-                    <p className='text-center font-mont text-xl mt-6 text-gray-600'>
-                        Who I am ? I've got my bachelor's degree in Mathematics field in 2016, I went to Mouloud Memmari University in TIZI OUZOU to continue my studies in Computer
-                        Science, I finish this year with a degree in Information Systems Engineering
-                    </p>
                 </div>
             </div>
         )
