@@ -50,7 +50,7 @@ class me extends Component {
                 </div>
 
                 <div className='ml-12 mr-32'>
-                    <h1 className=' text-green-600 font-playfair font-bold text-5xl mt-20 text-center'>Job Opportunities</h1>
+                    <h1 className=' text-green-600 font-playfair font-bold text-5xl mt-52 text-center'>Job Opportunities</h1>
                     <div className='flex flex-col mr-52 ml-52 border-t-4 border-green-500 mt-6'></div>
                     <div className='grid grid-cols-2 ml-32 mt-32'>
                         <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14  text-white mt-5 border border-transparent px-3 py-7 bg-code bg-center bg-cover font-playfair font-bold text-center text-3xl'>

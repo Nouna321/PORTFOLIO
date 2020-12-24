@@ -4,11 +4,13 @@ import './index.css'
 import Accueil from './Accueil'
 import reportWebVitals from './reportWebVitals'
 import Me from './me'
+import Projects from './projects'
 
 ReactDOM.render(
     <React.StrictMode>
         <Accueil />
         <Me />
+        <Projects />
     </React.StrictMode>,
     document.getElementById('root')
 )
