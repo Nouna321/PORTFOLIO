@@ -8,7 +8,7 @@ class Accueil extends Component {
     render() {
         return (
             <div className='h-screen bg-header bg-center bg-cover'>
-                <div className='h-full bg-gray-900 bg-opacity-80 '>
+                <div className='h-full bg-gray-900 bg-opacity-80'>
                     <div className='flex flex-row ... justify-between flex flex-col ...'>
                         <div className='flex flex-row ... justify-between'>
                             <div className='flex flex-row ...'>

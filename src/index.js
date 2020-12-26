@@ -4,13 +4,15 @@ import './index.css'
 import Accueil from './Accueil'
 import reportWebVitals from './reportWebVitals'
 import Me from './me'
-import Projects from './projects'
+import Animation from './animation'
+import Footer from './footer'
 
 ReactDOM.render(
     <React.StrictMode>
         <Accueil />
         <Me />
-        <Projects />
+        <Animation />
+        <Footer />
     </React.StrictMode>,
     document.getElementById('root')
 )

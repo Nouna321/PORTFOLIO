@@ -30,8 +30,8 @@ class me extends Component {
                     <h1 className=' text-green-600 font-playfair font-bold text-5xl mt-60 text-center'>Work with me</h1>
                     <div className='flex flex-col mr-52 ml-52 border-t-4 border-green-500 mt-2'></div>
                     <p className='ml-16 font-mont text-xl mt-16 text-gray-600'>
-                        I provide a relaxed working environment and opportunity for professional and personal growth. Send your application and come meet me to discover all that
-                        Z-faracha can provide you.
+                        Work with me with confidence thanks to my experience and my projects already realized, moreover you can visualize them and see my achievements, and without
+                        forgetting that I am a person open to the world and I have a very wide network which allows to advance very quickly especially in my field.
                     </p>
                 </div>
                 <div className='flex flex-row justify-center '>
@@ -50,17 +50,17 @@ class me extends Component {
                 </div>
 
                 <div className='ml-12 mr-32'>
-                    <h1 className=' text-green-600 font-playfair font-bold text-5xl mt-52 text-center'>Job Opportunities</h1>
+                    <h1 className=' text-green-600 font-playfair font-bold text-5xl mt-52 text-center'>My Projects</h1>
                     <div className='flex flex-col mr-52 ml-52 border-t-4 border-green-500 mt-6'></div>
                     <div className='grid grid-cols-2 ml-32 mt-32'>
                         <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14  text-white mt-5 border border-transparent px-3 py-7 bg-code bg-center bg-cover font-playfair font-bold text-center text-3xl'>
-                            Web Developer
+                            Web development
                         </a>
                         <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code2 bg-center bg-cover font-playfair font-bold text-center text-3xl'>
-                            Mobile Developer
+                            Mobile development
                         </a>
                         <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code3 bg-center bg-cover mb-4 font-playfair font-bold text-center text-3xl'>
-                            FullStack Developer
+                            Data Science
                         </a>
                         <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code4 bg-center bg-cover mb-4 font-playfair font-bold text-center text-3xl'>
                             Freelance
