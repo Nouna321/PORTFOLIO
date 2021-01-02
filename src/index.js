@@ -1,18 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Accueil from './Accueil'
 import reportWebVitals from './reportWebVitals'
-import Me from './me'
-import Animation from './animation'
-import Footer from './footer'
+import App from './Components/App'
 
 ReactDOM.render(
     <React.StrictMode>
-        <Accueil />
-        <Me />
-        <Animation />
-        <Footer />
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 )

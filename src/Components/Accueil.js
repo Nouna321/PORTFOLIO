@@ -1,10 +1,28 @@
 import React, { Component } from 'react'
 import { GiButterfly } from 'react-icons/gi'
+import Modal from './Modal'
 
 class Accueil extends Component {
     constructor() {
         super()
     }
+
+    state = {
+        visible: false,
+    }
+
+    montre = () => {
+        this.setState({
+            visible: true,
+        })
+    }
+
+    cache = () => {
+        this.setState({
+            visible: false,
+        })
+    }
+
     render() {
         return (
             <div className='h-screen bg-header bg-center bg-cover'>
@@ -27,7 +45,8 @@ class Accueil extends Component {
                                 </a>
                                 <a
                                     className='ml-8 mr-20 text-white mt-5 border border-white-200 px-3 py-3 transition ease-out duration-500 hover:bg-grey-100 transform hover:-translate-y-1'
-                                    href='#'>
+                                    href='#'
+                                    onClick={this.montre}>
                                     Contact me
                                 </a>
                             </nav>
@@ -41,15 +60,17 @@ class Accueil extends Component {
                             I'm a web / mobile developer from <span className='text-green-400'>Algeria.</span>
                         </p>
                     </div>
-
                     <div className='flex justify-center'>
-                        <button class='mr-16 mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded shadow ripple hover:shadow-lg hover:bg-green-800 focus:outline-none'>
+                        <button className='mr-16 mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded shadow ripple hover:shadow-lg hover:bg-green-800 focus:outline-none'>
                             make your quote
                         </button>
-                        <button class=' mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-transparent border-2 border-white-700 rounded ripple hover:bg-green-400 focus:outline-none'>
+                        <button
+                            onClick={this.montre}
+                            className=' mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-transparent border-2 border-white-700 rounded ripple hover:bg-green-400 focus:outline-none'>
                             Contact me
                         </button>
                     </div>
+                    <Modal visible={this.state.visible} cache={this.cache} />
                 </div>
             </div>
         )
