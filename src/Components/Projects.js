@@ -32,22 +32,30 @@ class Projects extends Component {
     }
     render() {
         return (
-            <div>
+            <div id='projects'>
                 <div data-aos='zoom-in-up' data-aos-duration='1000'>
-                    <div className='ml-12 mr-32'>
+                    <div className='ml-12 mr-32 mt-4'>
                         <h1 className=' text-green-600 font-playfair font-bold text-5xl mt-52 text-center'>My Projects</h1>
                         <div className='flex flex-col mr-52 ml-52 border-t-4 border-green-500 mt-6'></div>
                         <div className='grid grid-cols-2 ml-32 mt-32'>
-                            <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14  text-white mt-5 border border-transparent px-3 py-7 bg-code bg-center bg-cover font-playfair font-bold text-center text-3xl'>
+                            <a
+                                href='https://github.com/Nouna321'
+                                className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14  text-white mt-5 border border-transparent px-3 py-7 bg-code bg-center bg-cover font-playfair font-bold text-center text-3xl'>
                                 Web development
                             </a>
-                            <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code2 bg-center bg-cover font-playfair font-bold text-center text-3xl'>
+                            <a
+                                href='https://github.com/Nouna321'
+                                className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code2 bg-center bg-cover font-playfair font-bold text-center text-3xl'>
                                 Mobile development
                             </a>
-                            <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code3 bg-center bg-cover mb-4 font-playfair font-bold text-center text-3xl'>
+                            <a
+                                href='https://github.com/Nouna321'
+                                className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code3 bg-center bg-cover mb-4 font-playfair font-bold text-center text-3xl'>
                                 Data Science
                             </a>
-                            <a className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code4 bg-center bg-cover mb-4 font-playfair font-bold text-center text-3xl'>
+                            <a
+                                href='https://github.com/Nouna321'
+                                className='transition duration-500 ease-in-out hover:bg-grey-100 transform hover:-translate-y-1  mr-14 text-white mt-5 border border-transparent px-3 py-7 bg-code4 bg-center bg-cover mb-4 font-playfair font-bold text-center text-3xl'>
                                 Freelance
                             </a>
                         </div>

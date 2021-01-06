@@ -5,22 +5,19 @@ import Modal from './Modal'
 class Accueil extends Component {
     constructor() {
         super()
+        this.state = {
+            show: false,
+        }
+        this.showModal = this.showModal.bind(this)
+        this.hideModal = this.hideModal.bind(this)
     }
 
-    state = {
-        visible: false,
+    showModal = () => {
+        this.setState({ show: true })
     }
 
-    montre = () => {
-        this.setState({
-            visible: true,
-        })
-    }
-
-    cache = () => {
-        this.setState({
-            visible: false,
-        })
+    hideModal = () => {
+        this.setState({ show: false })
     }
 
     render() {
@@ -34,19 +31,18 @@ class Accueil extends Component {
                                 <p className='font-Cursive mt-8 text-white font-playfair '>Z-faracha</p>
                             </div>
                             <nav className='flex flex-row ... '>
-                                <a className='ml-7 text-white mt-8' href='#'>
+                                <a className='ml-7 text-white mt-8' href='#me'>
                                     About Me
                                 </a>
-                                <a className='ml-7 text-white mt-8' href='#'>
+                                <a className='ml-7 text-white mt-8' href='#me2'>
                                     Work with me
                                 </a>
-                                <a className='ml-7 text-white mt-8' href='#'>
+                                <a className='ml-7 text-white mt-8' href='#projects'>
                                     My projects
                                 </a>
                                 <a
                                     className='ml-8 mr-20 text-white mt-5 border border-white-200 px-3 py-3 transition ease-out duration-500 hover:bg-grey-100 transform hover:-translate-y-1'
-                                    href='#'
-                                    onClick={this.montre}>
+                                    onClick={this.showModal}>
                                     Contact me
                                 </a>
                             </nav>
@@ -65,12 +61,13 @@ class Accueil extends Component {
                             make your quote
                         </button>
                         <button
-                            onClick={this.montre}
+                            onClick={this.showModal}
                             className=' mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-transparent border-2 border-white-700 rounded ripple hover:bg-green-400 focus:outline-none'>
                             Contact me
                         </button>
                     </div>
-                    <Modal visible={this.state.visible} cache={this.cache} />
+
+                    <Modal show={this.state.show} handleClose={this.hideModal} />
                 </div>
             </div>
         )

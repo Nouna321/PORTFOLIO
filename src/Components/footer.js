@@ -15,14 +15,20 @@ class footer extends Component {
                 <div className='flex flex-col mx-auto mt-16'>
                     <GiButterfly size={40} className='text-green-700 mx-auto animate-pulse' />
                     <p className='mt-4 font-mont text-2xl'>
-                        © 2020 <em className='font-Cursive mt-8 text-gray-900 font-playfair text-2xl'>Z-farasha</em>. All Rights Reserved
+                        © 2021 <em className='font-Cursive mt-8 text-green-700 font-playfair text-2xl animate-pulse'>Z-farasha</em>. All Rights Reserved
                     </p>
                 </div>
                 <div className=' flex flex-col mx-auto'>
                     <div className='grid grid-cols-3 mt-8'>
-                        <ImFacebook2 size={30} className='text-gray-900 mr-8 ' />
-                        <SiInstagram size={30} className='text-gray-900 mr-8 ' />
-                        <SiGithub size={30} className='text-gray-900 mr-4' />
+                        <a href='https://web.facebook.com/nou.naas.39'>
+                            <ImFacebook2 size={30} className='text-gray-900 mr-8 animate-pulse ' />
+                        </a>
+                        <a href='https://www.instagram.com/nounaass321/'>
+                            <SiInstagram size={30} className='text-gray-900 mr-8 animate-pulse' />
+                        </a>
+                        <a href='https://github.com/Nouna321'>
+                            <SiGithub size={30} className='text-gray-900 mr-4 animate-pulse' />
+                        </a>
                     </div>
                 </div>
                 <div className='flex mx-auto'>
