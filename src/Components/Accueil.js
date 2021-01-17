@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import { GiButterfly } from 'react-icons/gi'
-import Modal from './Modal'
+import Modal from './Modals/Modal'
+import Modalx from './Modals/Modalx'
 
 class Accueil extends Component {
     constructor() {
         super()
         this.state = {
             show: false,
+            showx: false,
         }
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
+
+        this.showxModal = this.showxModal.bind(this)
+        this.hidexModal = this.hidexModal.bind(this)
     }
 
     showModal = () => {
@@ -18,6 +23,14 @@ class Accueil extends Component {
 
     hideModal = () => {
         this.setState({ show: false })
+    }
+
+    showxModal = () => {
+        this.setState({ showx: true })
+    }
+
+    hidexModal = () => {
+        this.setState({ showx: false })
     }
 
     render() {
@@ -57,7 +70,9 @@ class Accueil extends Component {
                         </p>
                     </div>
                     <div className='flex justify-center'>
-                        <button className='mr-16 mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded shadow ripple hover:shadow-lg hover:bg-green-800 focus:outline-none'>
+                        <button
+                            onClick={this.showxModal}
+                            className='mr-16 mt-6 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded shadow ripple hover:shadow-lg hover:bg-green-800 focus:outline-none'>
                             make your quote
                         </button>
                         <button
@@ -68,6 +83,7 @@ class Accueil extends Component {
                     </div>
 
                     <Modal show={this.state.show} handleClose={this.hideModal} />
+                    <Modalx showx={this.state.showx} handleClosex={this.hidexModal} />
                 </div>
             </div>
         )
