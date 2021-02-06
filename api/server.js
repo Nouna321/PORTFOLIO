@@ -1,41 +1,47 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const knex = require('knex')
 
 const app = express()
 
+const db = knex({
+    client: 'pg',
+    connection: {
+        host: '127.0.0.1',
+        user: 'postgres',
+        password: 'test',
+        database: 'postgres',
+    },
+})
+
+db.select('*')
+    .from('contacts')
+    .then((data) => {
+        console.log(data)
+    })
+
 app.use(bodyParser.json())
 app.use(cors())
-
-const database = {
-    users: [
-        {
-            firstName: 'AIT SADOUNE',
-            lastName: 'Zouina',
-            email: 'zouina@gmail.com',
-            Title: 'dev web',
-            expressYourSelf: 'hi my name is zouina',
-            joined: new Date(),
-        },
-    ],
-}
 
 app.get('/', (req, res) => {
     res.send(database.users)
 })
 
 app.post('/Modal', (req, res) => {
-    const { firstName, lastName, email, Title, expressYourSelf } = req.body
-    database.users.push({
-        firstName: 'AIT SADOUNE',
-        lastName: 'Zouina',
-        email: 'zouina@gmail.com',
-        Title: 'dev web',
-        expressYourSelf: 'hi my name is zouina',
-        joined: new Date(),
-    })
-
-    res.json(database.users[database.users.length - 1])
+    const { firstname, lastname, email, title, expressyourself } = req.body
+    db('contacts')
+        .insert({
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            title: title,
+            expressyourself: expressyourself,
+        })
+        .then((user) => {
+            res.json(user[0])
+        })
+        .catch((err) => res.status(400).json('unable to get user'))
 })
 
 app.listen(3001, () => {

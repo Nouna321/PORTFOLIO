@@ -6,18 +6,16 @@ import Tools from './Tools'
 import Projects from './Projects'
 import Footer from './footer'
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Accueil />
-                <Me />
-                <Tools />
-                <Projects />
-                <Footer />
-            </div>
-        )
-    }
+const App = () => {
+    return (
+        <div>
+            <Accueil />
+            <Me />
+            <Tools />
+            <Projects />
+            <Footer />
+        </div>
+    )
 }
 
 export default App

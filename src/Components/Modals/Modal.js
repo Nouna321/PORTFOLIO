@@ -5,20 +5,20 @@ class Modal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            firstName: '',
-            lastName: '',
+            firstname: '',
+            lastname: '',
             email: '',
-            Title: '',
-            expressYourSelf: '',
+            title: '',
+            expressyourself: '',
         }
     }
 
     onFirstNameChange = (event) => {
-        this.setState({ firstName: event.target.value })
+        this.setState({ firstname: event.target.value })
     }
 
     onLastNameChange = (event) => {
-        this.setState({ lastName: event.target.value })
+        this.setState({ lastname: event.target.value })
     }
 
     onMailChange = (event) => {
@@ -26,25 +26,29 @@ class Modal extends React.Component {
     }
 
     onTitleChange = (event) => {
-        this.setState({ Title: event.target.value })
+        this.setState({ title: event.target.value })
     }
 
     onExpYourSelfChange = (event) => {
-        this.setState({ expressYourSelf: event.target.value })
+        this.setState({ expressyourself: event.target.value })
     }
 
     onSubmitContact = () => {
+        //true
         fetch('http://localhost:3001/Modal', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                firstName: this.state.firstName,
-                lastName: this.state.lastName,
+                firstname: this.state.firstname,
+                lastname: this.state.lastname,
                 email: this.state.email,
-                Title: this.state.Title,
-                expressYourSelf: this.state.expressYourSelf,
+                title: this.state.title,
+                expressyourself: this.state.expressyourself,
             }),
-        })
+        }).then((response) => response.json())
+        // .then(response => {
+        //     //false
+        // })
     }
 
     render() {

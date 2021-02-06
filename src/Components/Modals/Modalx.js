@@ -1,26 +1,7 @@
 import React from 'react'
 import './modalx.css'
-import ModalXX from './ModalXX'
 
 class Modalx extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            showxx: false,
-        }
-
-        this.showxxModal = this.showxxModal.bind(this)
-        this.hidexxModal = this.hidexxModal.bind(this)
-    }
-
-    showxxModal = () => {
-        this.setState({ showxx: true })
-    }
-
-    hidexxModal = () => {
-        this.setState({ showxx: false })
-    }
-
     render() {
         const showHideClassName = this.props.showx ? 'modal display-block' : 'modal display-none'
         return (
@@ -34,12 +15,15 @@ class Modalx extends React.Component {
                     </div>
                     <h1 className='text-gray-100 font-playfair font-bold text-5xl text-center animate-pulse'>Make yout quote</h1>
                     <div className='flex flex-col'>
-                        <button
-                            onClick={this.showxxModal}
-                            class='h-12 w-80 mt-20 mx-auto inline-block text-xs font-medium leading-6 text-center text-green-100 uppercase transition bg-transparent border-2 border-green-100 rounded ripple hover:bg-green-300 focus:outline-none'>
+                        <h1 class='h-12 w-80 mt-20 mx-auto inline-block text-1xl font-medium leading-6 text-center text-green-100 uppercase '>
                             the different types of websites and their prices
-                        </button>
-                        <ModalXX showxx={this.state.showxx} handleClosexx={this.hidexxModal} />
+                        </h1>
+                        <ul className='list-disc mt-12 text-gray-100 mx-auto'>
+                            <li>Showcase websites: a range from a hundred euros to 15000 euros </li>
+                            <li className='mt-4'>Portal websites: 2 000 to 50 000 euros</li>
+                            <li className='mt-4'>E-commerce websites: 5 000 euros to 100 000 euros</li>
+                            <li className='mt-4'>Customized websites: will rarely start at less than 8000 euros</li>
+                        </ul>
                     </div>
                 </section>
             </div>
